@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>FashionQuest</title>
+    <link rel="icon"
+        href="favicon.png"
+        type="image/png">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="style.css">
+    <link rel="stylesheet"
+        href="slider.css">
+</head>
+
+<body>
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-light my-nav-bg sticky-top">
+        <div class="container-fluid my-nav-w">
+            <a class="navbar-brand my-brand"
+                href="#">
+                <img class="my-brand"
+                    src="./resources/Group 2.png"
+                    alt="">
+            </a>
+            <button class="navbar-toggler text-light border-0"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse"
+                id="navbarSupportedContent">
+                <form class="d-flex">
+                    <input class="form-control me-2"
+                        type="search"
+                        placeholder="Search"
+                        aria-label="Search">
+                    <button class="btn btn-outline-success"
+                        type="submit">Search</button>
+                </form>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-text text-white">
+                    <li class="nav-item">
+                        <a class="nav-link nav-text text-white"
+                            aria-current="page"
+                            href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-text text-white"
+                            href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-text text-white"
+                            aria-current="page"
+                            href="#">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-text text-white"
+                            aria-current="page"
+                            href="#"><i class="fa-solid fa-cart-shopping icon"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-text text-white"
+                            aria-current="page"
+                            href="#"><i class="fa-regular fa-user icon"></i></a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar Ended -->
+
+    <!-- Carousel Slider Start -->
+    <div class="slider">
+        <div class="arrow prev"
+            onclick="prevSlide()"><i class="fa-solid fa-angle-right prev prev-icon"></i></div>
+        <div class="arrow next"
+            onclick="nextSlide()"><i class="fa-solid fa-angle-right next"></i></div>
+        <div class="fa-icon"
+            onclick="toggleAutoScroll()">
+            <i id="autoIcon"
+                class="fa"></i>
+        </div>
+        <div id="sliderContent"></div>
+    </div>
+
+    <!-- Carousel Slider Ended -->
+    <!-- Sales -->
+    <div class="content-wrapper mt-5">
+        <div class="left">
+            <div class="content1 common">
+                <div class="img"><img src="./resources/hero2.png"
+                        alt="ipad9"></div>
+                <article>
+                    <h1>Ipad 9</h1>
+                    <p>Powerful. Easy to use. Versatile. iPad is designed for all the things you love to do. Work, play,
+                        create, learn, stay
+                        connected, and more. All at an incredible value.</p>
+                </article>
+            </div>
+            <div class="content2 common">
+                <div class="img"><img src="./resources/hero1.png"
+                        alt="Sony Headphone"></div>
+                <article>
+                    <span>Apple<br /> Airpods
+                        <p class="max">Max</p>
+                    </span>
+                    <p>Introducing AirPods Max — a perfect balance of exhilarating high-fidelity audio and the
+                        effortless magic of AirPods. The
+                        ultimate personal listening experience is here.</p>
+                </article>
+            </div>
+        </div>
+        <div class="right">
+            <div>
+                <article class="right-article">
+                    <h1>Mac Book Air</h1>
+                    <p>Make a array of object for react.js wit following objects
+                        Strikingly thin and fast so you can work, play, or create anywhere.<br />
+                        MacBook Air 13" and 15" with M2 laptops
+                        13” model from $1099 to $91.58/mo. for 12 mo.
+                        15” model from $1299 to $108.25/mo. for 12 mo.</p>
+                </article>
+                <a href="#"
+                    class="btn bg-gradient-to-r text-white border-none">Shop Now</a>
+            </div>
+            <div class="img"><img src="./resources/hero3.png"
+                    alt=""></div>
+        </div>
+    </div>
+
+    <!-- Item Category -->
+    <div class="card-container mx-auto mt-5">
+        <div class="d-flex mb-4 justify-content-between align-items-center">
+            <h1 class="fs-4">Brows by Category</h1>
+            <div>
+                <button class="border-0 me-2 bg-transparent">
+                    <i class="fa-solid fa-chevron-right fa-rotate-180"></i>
+                </button>
+                <button class="border-0 bg-transparent">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+        <div class="card-wrapper">
+            <div class="flex flex-column justify-content-center align-items-center bg-[#EDEDED] c-card">
+                <i class="fa-solid fa-mobile colo"></i>
+                <h3 class="fs-6">Phone</h3>
+            </div>
+            <div class="flex flex-column justify-content-center align-items-center bg-[#EDEDED] c-card">
+                <i class="fa-solid fa-computer-mouse"></i>
+                <h3 class="fs-6">Mouse</h3>
+            </div>
+            <div class="flex flex-column justify-content-center align-items-center bg-[#EDEDED] c-card">
+                <i class="fa-solid fa-camera"></i>
+                <h3 class="fs-6">Camera</h3>
+            </div>
+            <div class="flex flex-column justify-content-center align-items-center bg-[#EDEDED] c-card">
+                <i class="fa-solid fa-headphones"></i>
+                <h3 class="fs-6">Headphone</h3>
+            </div>
+            <div class="flex flex-column justify-content-center align-items-center bg-[#EDEDED] c-card">
+                <i class="fa-solid fa-laptop"></i>
+                <h3 class="fs-6">Computer</h3>
+            </div>
+            <div class="flex flex-column justify-content-center align-items-center bg-[#EDEDED] c-card">
+                <i class="fa-solid fa-gamepad"></i>
+                <h3 class="fs-6">Games</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Item Card -->
+
+    <div class="card-container mt-4">
+        <ul class="d-flex list-unstyled gap-4">
+            <Li class="active">New Arrival</Li>
+            <Li>Best Seller</Li>
+            <Li>Features Products</Li>
+        </ul>
+        <div class="product-card">
+            <div class="card">
+                <i class="fa-regular fa-heart"></i>
+
+                <img src="./resources/Iphone 14 pro 1-1.png"
+                    class="card-img-top"
+                    alt="image-2">
+                <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                    <p class="card-text">Apple Watch Series 9 GPS 41mm Starlight Aluminium Case.The most rugged and
+                        capable Apple Watch pushes the limits again. Featuring the all-new S9 SiP. A magical new way to
+                        use
+                        your watch without touching the screen.</p>
+                    <h5 class="card-title fs-2 fw-bold">$399</h5>
+                    <a href="#"
+                        class="btn bg-gradient-to-r text-white border-none">Buy NOw</a>
+                </div>
+            </div>
+            <div class="card">
+                <i class="fa-regular fa-heart"></i>
+                <img src="./resources/Iphone 14 pro 1-2.png"
+                    class="card-img-top"
+                    alt="image-2">
+                <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                    <p class="card-text">Apple iPhone 14 Pro Max
+                        internal storage base variant of 6 GB
+                        Ram, 128 GB, 256 GB, 512 GB, 1 TB Internal Memory (ROM). Apple iPhone 14 Pro Max which is
+                        available in Space Black,
+                        Silver, Gold, Deep Purple.</p>
+                    <h5 class="card-title fs-2 fw-bold">$499</h5>
+                    <a href="#"
+                        class="btn bg-gradient-to-r text-white border-none">Buy NOw</a>
+                </div>
+            </div>
+            <div class="card">
+                <i class="fa-regular fa-heart"></i>
+                <img src="./resources/Iphone 14 pro 1-3.png"
+                    class="card-img-top"
+                    alt="image-2">
+                <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                    <p class="card-text">The DIGIC 8 Image Processor helps produce high image quality and fast
+                        operation, even in in low light. When using high
+                        ISO settings, the image processor helps keep results sharp and detailed in virtually any
+                        lighting situation.</p>
+                    <h5 class="card-title fs-2 fw-bold">$699</h5>
+                    <a href="#"
+                        class="btn bg-gradient-to-r text-white border-none">Buy NOw</a>
+                </div>
+            </div>
+            <div class="card">
+                <i class="fa-regular fa-heart"></i>
+                <img src="./resources/Iphone 14 pro 1.png"
+                    class="card-img-top"
+                    alt="image-2">
+                <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                    <p class="card-text">Introducing AirPods Max — a perfect balance of exhilarating high-fidelity audio
+                        and the effortless magic of AirPods. The
+                        ultimate personal listening experience is here.</p>
+                    <h5 class="card-title fs-2 fw-bold">$399</h5>
+                    <a href="#"
+                        class="btn bg-gradient-to-r text-white border-none">Buy NOw</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 11.11 sales -->
+
+    <div class="sales-container-wrapper py-4">
+        <div class="d-flex justify-content-between align-items-center sale-11-11">
+            <div class="sales-left">
+                <img src="./resources/image 19.png"
+                    alt="">
+            </div>
+            <div class="center text-center">
+                <span class="fs-2 fw">
+                    <span class="sale-11">11.11</span>
+                    <span class="text-light">Sales</span>
+                </span>
+                <p class="text-light">On November 11th, early birds shopping on Daraz can enjoy a fantastic 20% off
+                    voucher from 11 AM to 3
+                    AM. Don't miss this limited-time opportunity for big savings!</p>
+            </div>
+            <div class="sales-right">
+                <img src="./resources/jbl_jr_310bt_blue 1.png"
+                    alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="ft-bg">
+        <div class="card-container d-flex justify-content-between py-5 my-footer">
+            <div class="my-brand">
+                <img class="my-brand"
+                    src="./resources/Group 2.png"
+                    alt="">
+            </div>
+            <div class="social-icon-up">
+                <ul class="d-flex list-unstyled gap-4">
+                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                </ul>
+            </div>
+            <div>
+                <h5>Services</h5>
+                <ul class="list-unstyled">
+                    <li>Bonus program</li>
+                    <li>Gift cards</li>
+                    <li>Credit and payment</li>
+                    <li>Service contracts</li>
+                    <li>Non-cash account</li>
+                    <li>Payment</li>
+                </ul>
+
+            </div>
+            <div>
+                <h5>Assistance to the buyer</h5>
+                <ul class="list-unstyled">
+                    <li>Find an order</li>
+                    <li>Terms of delivery</li>
+                    <li>Exchange and return of goods</li>
+                    <li>Guarantee</li>
+                    <li>Frequently asked questions</li>
+                    <li>Terms of use of the site</li>
+                </ul>
+
+            </div>
+            <div class="social-icon-bottom">
+                <ul class="d-flex list-unstyled gap-4">
+                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="./custom.js"></script>
+</body>
+
+</html>
